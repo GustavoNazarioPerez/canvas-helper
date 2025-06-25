@@ -78,6 +78,8 @@ def is_positive(n: int) -> bool:
 ### Testing
 There are some tests in the `tests/` directory but feel free to write your own manual tests in the file.
 
+> If **any one** of the CI fails, the PR will show ❌. Check the **"Actions" tab** to see exactly which part failed and what the error message was.
+
 ```python
 print(is_even(4))      # Expected: True
 print(average([1.0, 2.0, 3.0]))  # Expected: 2.0
