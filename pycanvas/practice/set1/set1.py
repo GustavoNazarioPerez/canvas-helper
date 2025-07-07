@@ -19,5 +19,4 @@ def average(numbers: list[float]) -> float | None:
 
 def is_positive(n: int) -> bool | None:
     """Return True if the number is positive, False otherwise"""
-    return# Add your code here
-    pass
+    return n > 0
