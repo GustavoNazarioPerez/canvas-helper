@@ -4,17 +4,13 @@ def is_even(n: int) -> bool | None:
 
 
 def average(numbers: list[float]) -> float | None:
-    """Return the average of a list of numbers.
-        If the list is empty, raise a ValueError."""   
+    """
+    Return the average of a list of numbers.
+    If the list is empty, raise a ValueError.
+    """
     if not numbers:
         raise ValueError("The list cannot be empty.")
-    return sum(numbers)    # Add your code here
-    """
-    Return the average of a list of floats.
-    Raises ValueError if the list is empty.
-    """
-    # Add your code here
-    pass
+    return sum(numbers) / len(numbers)  # Calculate the average of the numbers
 
 
 def is_positive(n: int) -> bool | None:
