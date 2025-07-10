@@ -101,4 +101,108 @@ Running mypy locally
 mypy pycanvas
 ```
 
+## Set 2
+After Set 2 you will be able to say you worked with:
+- Handling user input
+- Object Oriented Programming
+- Python imports
+
+### Git Setup
+1. Make sure you are in the `canvas-helper/` directory.
+
+2. Create a branch off of `main`
+<details>
+<summary>Click to reveal the solution</summary>
+
+```bash
+git switch main
+git pull
+git switch -c angel/set-2
+```
+</details>
+
+### Prerequisites
+Same as set 1
+
+### The Problem Set
+Take a look at `pycanvas/practice/set2/utils/canvas_functions.py`.
+
+We are now working with a class and some functions that operate on objects of that class.
+
+#### The `Assignment` Class
+
+```python
+class Assignment:
+    def __init__(self, course: str, name: str, assignment_type: str, due_date: str):
+```
+This class represents an assignment in Canvas, like a quiz, homework, or exam.
+
+Each assignment has four attributes:
+
+`course`: the name of the course (e.g., "Physics II")
+
+`name`: the name of the assignment (e.g., "Newton's Laws")
+
+`assignment_type`: the type of assignment (e.g., "Quiz")
+
+`due_date`: a string representing the due date in YYYY-MM-DD format (e.g., "2025-12-22")
+
+When printed, the assignment object will show a string like:
+
+```bash
+Physics II - Newton's Laws (Quiz) due 2025-12-22
+```
+
+#### The Functions
+```python
+def filter_by_class(assignments: list[Assignment], course_name: str) -> list[Assignment] | None:
+```
+This function filters a list of assignments by course name.
+
+It should return a list of only those assignments that match the given course.
+
+Example:
+
+```python
+filter_by_class(assignments, "Math")
+```
+should return only the Math assignments.
+
+If no assignments match, return an empty list, not None.
+
+```python
+def sort_assignments(assignments: list[Assignment], order: str = "asc") -> list[Assignment] | None:
+```
+This function sorts a list of assignments by due date.
+
+The order parameter determines the sorting order:
+
+"asc" → earliest due dates first
+
+"desc" → latest due dates first
+
+Use the due_date string (in "YYYY-MM-DD" format) for sorting.
+
+You may find the datetime module useful for this.
+
+Return the sorted list. If the list is empty, return an empty list.
+
+##### Utility Function
+```python
+def display_assignments(assignments: list[Assignment]):
+```
+This function prints each assignment in the list, using the __repr__ method defined in the class.
+
+You can use it for testing and debugging to easily see what's in your list.
+
+#### Main
+- The main entrypoint of this code is in `pycanvas/practice/set2/set2.py` 
+- This uses imports to get the functions from above available for use. Right now
+the imports are broken so those will have to be fixed.
+- The goal for main is to get some user input that will be passed into our util functions.
+- I would suggest starting with main, as in, getting the user input first and then writing 
+the util functions.
+
+### Testing
+Same as set 1
 
