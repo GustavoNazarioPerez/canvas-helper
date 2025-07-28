@@ -26,7 +26,6 @@ def filter_by_class(assignments: list[Assignment], course_name: str) -> list[Ass
         
 
 def sort_assignments(assignments: list[Assignment], order: str = "asc") -> list[Assignment] | None:
-    
     """
     Sorts assignments by due date.
     If order == "asc", soonest due dates first.

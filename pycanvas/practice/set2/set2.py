@@ -15,16 +15,15 @@ assignments = [
 # 🚀 Main program — this is where user interaction happens
 def main():
     # Ask the user for which class they want to view assignments for
-    course = input("What class do you want to see assignments for?")
-    
+    course = input("What class do you want to see assignments for ?")
+    print(f"\nAssignments for {course}:")
+    display_assignments(sorted_assignments)
     # Ask if they want assignments sorted from soonest or latest
     order = input("do you want assignments sorted by due date? (asc/desc): ")
     # Use the functions to filter and sort the list
     filtered = filter_by_class(assignments, course)
     sorted_assignments = sort_assignments(filtered, order)
     # Show the results
-    print(f"\nAssignments for {course}:")
-    display_assignments(sorted_assignments)
 
 # 🔁 Run the main program if this file is executed directly
 if __name__ == "__main__":
