@@ -15,11 +15,15 @@ class Assignment:
 
 def filter_by_class(assignments: list[Assignment], course_name: str) -> list[Assignment] | None:
     """
-    Filters the list of assignments by c/ourse name.
+    Filters the list of assignments by course name.
     Example: filter_by_class(assignments, "Math") should return only Math assignments.
     """
-    pass  # Get rid of this line once you have implemented the function
-
+    new_filtered = []
+    for assignment in assignments:
+        if assignment.course == course_name:
+            new_filtered.append(assignment)
+    return new_filtered
+        
 
 def sort_assignments(assignments: list[Assignment], order: str = "asc") -> list[Assignment] | None:
     """
@@ -27,10 +31,17 @@ def sort_assignments(assignments: list[Assignment], order: str = "asc") -> list[
     If order == "asc", soonest due dates first.
     If order == "desc", latest due dates first.
     """
-    pass  # Get rid of this line once you have implemented the function
-
+    if order=="asc":
+        assignments.sort(key=get_date)
+    elif order=="desc":
+        assignments.sort(key=get_date, reverse=True)
+    else:
+        print("ERROR: YOU MUST SPECIFCY 'asc' or 'desc'. THIS LIST MAY BE SORTED")
+    return assignments
 
 # Feel free to use this anywhere to see what the assignments look like
 def display_assignments(assignments: list[Assignment]):
     for a in assignments:
         print(a)
+def get_date(assignment):
+    return assignment.due_date
