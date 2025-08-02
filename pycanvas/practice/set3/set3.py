@@ -30,6 +30,30 @@ class Person:
         self.eye_color = eye_color
         self.weight = weight
 
+
+def matching_colors(people, car):
+    """
+    EXAMPLE
+    Given a list of people and a car, return a list of people whose eyes are
+    the same color as the car
+    
+    Args:
+        people (list): List of people
+        car (Car): The car to check 
+        
+    Returns:
+        bool: A list with all of the people whose eye color is the same as 
+        the car color
+    """
+    matching = []
+
+    for person in people:
+        if person.eye_color == car.color():
+            matching.append(person)
+
+    return matching
+
+
 def can_drive(pers, car):
     """
     Check if a person can drive a car.
