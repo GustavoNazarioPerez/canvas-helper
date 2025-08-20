@@ -48,7 +48,7 @@ def matching_colors(people, car):
     matching = []
 
     for person in people:
-        if person.eye_color == car.color():
+        if person.eye_color == car.color:
             matching.append(person)
 
     return matching
@@ -66,8 +66,11 @@ def can_drive(pers, car):
     Returns:
         bool: True if person can drive, False otherwise
     """
-    # TODO: Implement this function
-    pass
+    if car.color == blue and pers.weight < 200
+        return True
+    else:
+        return False
+    pass    
 
 
 def get_all_suvs(cars):
@@ -80,8 +83,10 @@ def get_all_suvs(cars):
     Returns:
         list: List containing only the SUV cars
     """
-    # TODO: Implement this function
-    pass
+    if is_suv = True
+        return cars.is_suv
+    else:        return False   
+    pass    
 
 
 def add_wheels_of_sedans(cars):
@@ -94,7 +99,11 @@ def add_wheels_of_sedans(cars):
     Returns:
         int: Total number of wheels for all sedans
     """
-    # TODO: Implement this function
+    if cars.is_sedan = True
+        def add(cars.num_wheels)
+        return cars.num_wheels
+    else:
+        return False
     pass
 
 
@@ -109,7 +118,10 @@ def can_fly(pers):
     Returns:
         bool: True if person can fly, False otherwise
     """
-    # TODO: Implement this function
+    if pers.has_jetpack = true and pers.has_fuel = True
+        return True
+    else:
+        return False
     pass
 
 
@@ -124,7 +136,10 @@ def needs_to_get_gas(car, gallons_needed):
     Returns:
         bool: True if car needs more gas, False if it has enough
     """
-    # TODO: Implement this function
+    if car.gas_in_gallons < gallons_needed
+        return True
+    else:
+        return False
     pass
 
 
@@ -139,7 +154,8 @@ def count_cars_by_color(cars, color):
     Returns:
         int: Number of cars with that color
     """
-    # TODO: Implement this function
+    if cars.color == color = True
+        def add(cars.color)
     pass
 
 
@@ -153,7 +169,14 @@ def get_heaviest_person(people):
     Returns:
         Person: The person with the highest weight, or None if list is empty
     """
-    # TODO: Implement this function
+    if people.weight = max
+        def find(people.weight) 
+            if people.weight = empty
+                return None
+            else:
+                heaviest = ("inf)")
+                 if people.weight > heaviest
+                  return max(people.weight)
     pass
 
 
@@ -168,5 +191,8 @@ def refuel_car(car, gallons_to_add):
     Returns:
         float: New total gallons in the car
     """
-    # TODO: Implement this function
+    if car.gas_in_gallons + gallons_to_add
+        return car.gas_in_gallons
+    else:
+        return False
     pass
